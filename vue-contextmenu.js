@@ -16,11 +16,16 @@
 				}.bind(this));
 			},
 			handler:function(e){
+				var e = e || window.event;
 				e.stopPropagation();
 				e.preventDefault();
 				var show = this.vm[this.arg];
 				if(!show) this.vm[this.arg] = true;
-				this.set({x:e.clientX,y:e.clientY});
+				var wW = window.innerWidth, wH = window.innerHeight,
+					w = this.el.offsetWidth, h = this.el.offsetHeight;
+				var x = ((e.clientY + h) > wH) ? e.clientY - h : e.clientY;
+				var y = ((e.clientX + w) > wW) ? e.clientX - w : e.clientX;
+				this.set({x:x,y:y});
 			}
 		})
 	}
