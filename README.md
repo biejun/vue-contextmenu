@@ -93,7 +93,7 @@ Vue.compontent('context-menu',{
 	}
 })
 ```
-在页面需要使用右键菜单的区域中添加v-contextmenu指令，如下：
+在页面需要使用右键菜单的区域添加v-contextmenu指令，如下：
 ```html
 <div class="demo" v-contextmenu:show="options" onselectstart="return false">
 
