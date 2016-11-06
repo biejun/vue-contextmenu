@@ -63,7 +63,7 @@
 	</div>
 </script>
 ```
-添加javaScript代码
+添加javaScript代码，注册一个右键菜单组件
 ```javascript
 Vue.compontent('context-menu',{
 	template : '#context-menu',
